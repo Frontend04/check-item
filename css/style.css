@@ -1,0 +1,309 @@
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2F2F51;
+  font-size: 16px;
+  background: #E5E5E5;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a, button {
+  color: inherit;
+  background: inherit;
+}
+
+.tab-switch[id=exclusive]:checked ~ .content-4, .tab-switch[id=premium]:checked ~ .content-3, .tab-switch[id=business]:checked ~ .content-2, .tab-switch[id=standard]:checked ~ .content-1 {
+  transform: none;
+}
+
+.products-title {
+  text-align: center;
+  font-size: 24px;
+}
+.products-tabs {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 600px;
+}
+.products-content {
+  display: flex;
+  position: absolute;
+  top: 80px;
+  transform: translateX(-1500px);
+  transition: transform 1s;
+}
+
+.tab-switch {
+  display: none;
+}
+.tab-switch:checked + .tab-label {
+  background: #EF7F1A;
+  color: #fff;
+}
+.tab-label {
+  cursor: pointer;
+  margin-right: 30px;
+  padding: 9px 27px;
+  border-radius: 3px;
+  transition: background 0.5s;
+}
+.tab-label:hover {
+  background: #f9cfa9;
+}
+
+.content-col {
+  width: 50%;
+}
+.content-image {
+  padding: 85px 69px;
+  background: #BABABA;
+}
+.content-image img {
+  border-radius: 3px;
+}
+.content-info {
+  padding: 63px 47px;
+  background: #fff;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.content-info-title {
+  font-size: 36px;
+  margin: 0 0 15px;
+  color: #EF7F1A;
+}
+.content-table {
+  width: 100%;
+}
+.content-item-title {
+  width: 100%;
+  padding-top: 19px;
+}
+.content-item-units {
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+.content-item-title div {
+  display: flex;
+}
+.content-item-title div::after {
+  content: "";
+  position: relative;
+  top: -3px;
+  flex-grow: 1;
+  border-bottom: 1px dotted #000;
+}
+
+.btn {
+  padding: 9px 27px;
+  border-radius: 7px;
+  color: #fff;
+  border: none;
+}
+
+/*# sourceMappingURL=style.css.map */

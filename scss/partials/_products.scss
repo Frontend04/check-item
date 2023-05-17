@@ -1,0 +1,124 @@
+@use 'var' as *;
+@use 'mixin' as *;
+
+$tabs: (
+  1: "standard",
+  2: "business",
+  3: "premium",
+  4: "exclusive",
+);
+
+%contentTransform {
+  transform: none;
+}
+
+.products {
+  &-title {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  &-tabs {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 600px;
+  }
+
+  &-content {
+    display: flex;
+    position: absolute;
+    top: 80px;
+    transform: translateX(-1500px);
+    transition: transform 1s;
+  }
+}
+
+.tab {
+  &-switch {
+    display: none;
+
+    &:checked + .tab-label {
+      background: $orangeColor;
+      color: #fff;
+    }
+
+    @each $number, $id in $tabs {
+      &[id=#{$id}]:checked ~ .content-#{$number} {
+        @extend %contentTransform;
+      }
+    }
+  }
+
+  &-label {
+    cursor: pointer;
+    margin-right: 30px;
+    padding: 9px 27px;
+    border-radius: 3px;
+    transition: background 0.5s;
+
+    &:hover {
+      background: lighten($orangeColor, 30%);
+    }
+  }
+}
+
+.content {
+  &-col {
+    width: 50%;
+  }
+
+  &-image {
+    padding: 85px 69px;
+    background: #BABABA;
+
+    & img {
+      border-radius: 3px;
+    }
+  }
+
+  &-info {
+    padding: 63px 47px;
+    background: #fff;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    &-title {
+      font-size: 36px;
+      margin: 0 0 15px;
+      color: $orangeColor;
+    }
+
+    &-text {}
+  }
+
+  &-table {
+    width: 100%;
+  }
+
+  &-item {
+    &-title {
+      width: 100%;
+      padding-top: 19px;
+    }
+
+    &-units {
+      white-space: nowrap;
+      vertical-align: bottom;
+    }
+  }
+}
+
+.content-item-title div {
+  display: flex;
+
+  &::after {
+    content: "";
+    position: relative;
+    top: -3px;
+    flex-grow: 1;
+    border-bottom: 1px dotted #000;
+  }
+}

@@ -1,0 +1,22 @@
+$btnColor: (
+  'red': #f00808,
+  'blue': #0202b1,
+  'yellow': #d5d500,
+  'green': #009c00,
+);
+
+.btn {
+  padding: 9px 27px;
+  border-radius: 7px;
+  color: #fff;
+  border: none;
+}
+
+@each $color, $value in $btnColor {
+  .btn-#{$color} {
+    @if $color == 'yellow' {
+      color: #000;
+    }
+    background: $value;
+  }
+}
